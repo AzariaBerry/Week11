@@ -1,4 +1,5 @@
-const key = '1cab01ad337737f6d48504c6a2b7d50e';
+const key = '';
+const express = require('express')
 if(key=='') document.getElementById('temp').innerHTML = ('Remember to add your api key!');
 
 function weatherBoy(cityID) {
@@ -20,15 +21,15 @@ function drawWeather( d ) {
 	document.getElementById('temp').innerHTML = celcius + '&deg;';
 	document.getElementById('location').innerHTML = d.name;
 
-//if( description.indexOf('rain') > 0 ) {
-//	document.body.className = 'rainy';
-//	} else if( description.indexOf('cloud') > 0 ) {
-//	document.body.className = 'cloudy';
-//	} else if( description.indexOf('sunny') > 0 ) {
-//	document.body.className = 'sunny';
-//	} else {
-//	document.body.className = 'clear';
-//	}
+if( description.indexOf('rain') > 0 ) {
+	document.body.className = 'rainy';
+	} else if( description.indexOf('cloud') > 0 ) {
+	document.body.className = 'cloudy';
+	} else if( description.indexOf('sunny') > 0 ) {
+	document.body.className = 'sunny';
+	} else {
+	document.body.className = 'clear';
+	}
 }
 window.onload = function() {
 	weatherBoy( 6167865 );
